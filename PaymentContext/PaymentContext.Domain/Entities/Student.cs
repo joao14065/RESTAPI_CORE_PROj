@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using PaymentContext.Domain.ValueObjects;
@@ -14,6 +15,8 @@ namespace PaymentContext.Domain.Entities
             Document = document;
             Email = email;
             _subscriptions = new List<Subscription>();
+
+            AddNotifications(name, document, email);
         }
 
         public Name Name { get; private set; }
@@ -25,7 +28,6 @@ namespace PaymentContext.Domain.Entities
         public void AddSubscription(Subscription subscription)
         {
             // Se já existir uma assinatura avira, cancela
-
             // Cancela todas assinaturas e coloca esta como principal
             foreach(var sub in Subscriptions)
                 sub.Inactivate();

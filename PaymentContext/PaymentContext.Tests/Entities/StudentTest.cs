@@ -7,11 +7,13 @@ namespace PaymentContext.Tests
     [TestClass]
     public class StudentTest
     {
-        [TestMethod]
+        // [TestMethod]
         public void TestMethod1()
         {
-            // var student = new Student(new Name("João Paulo", "Novato"),new Document("123456", Domain.Enums.EDocumentType.CPF), "joao@teste.com");
-            
+            // var name = new Name("TESTE", "TESTE");      
+            // foreach(var not in name.Notifications){
+            //     not.Message;
+            // }      
         }
     }
 }
